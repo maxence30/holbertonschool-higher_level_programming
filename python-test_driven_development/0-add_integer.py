@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 Module that provides a function to add two integers.
-
-This module defines a single function that adds two numbers
-after validating their types.
 """
 
 
