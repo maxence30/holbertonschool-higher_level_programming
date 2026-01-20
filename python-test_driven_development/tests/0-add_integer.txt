@@ -1,3 +1,5 @@
+>>> from 0-add_integer import add_integer
+
 =========================
 Test add_integer function
 =========================
