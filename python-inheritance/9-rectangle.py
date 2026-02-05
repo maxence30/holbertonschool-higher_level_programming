@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle class inheriting from BaseGeometry with area and string representation."""
+"""Module that defines a Rectangle class with area and string representation."""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class with private width and height, area calculation, and string representation."""
+    """Rectangle class with private width and height, area calculation, and string
+    representation.
+    """
 
     def __init__(self, width, height):
         """Initialize a Rectangle with width and height.

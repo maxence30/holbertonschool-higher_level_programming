@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-"""Module that defines a Square class inheriting from Rectangle with custom string representation."""
+"""Module that defines a Square class inheriting from Rectangle
+with custom string representation.
+"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square class inheriting from Rectangle with size validation and custom string output."""
+    """Square class inheriting from Rectangle with size validation
+    and custom string output.
+    """
 
     def __init__(self, size):
         """Initialize a Square with a given size.
@@ -19,4 +23,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return the string representation of the square."""
-        return "[Square] {}/{}".format(self._Rectangle__width, self._Rectangle__height)
+        return "[Square] {}/{}".format(
+            self._Rectangle__width, self._Rectangle__height
+        )
