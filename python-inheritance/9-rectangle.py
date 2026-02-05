@@ -1,30 +1,24 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle class with area and string representation."""
+"""Rectangle class with area and string representation."""
+
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class with private width and height, area calculation, and string
-    representation.
-    """
+    """Rectangle with private width/height, area method, and __str__."""
 
     def __init__(self, width, height):
-        """Initialize a Rectangle with width and height.
-
-        Args:
-            width (int): Width of the rectangle
-            height (int): Height of the rectangle
-        """
+        """Initialize rectangle width and height."""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
     def area(self):
-        """Calculate the area of the rectangle."""
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
     def __str__(self):
-        """Return the string representation of the rectangle."""
+        """Return string representation of the rectangle."""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
