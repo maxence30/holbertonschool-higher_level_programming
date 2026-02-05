@@ -1,16 +1,20 @@
 #!/usr/bin/python3
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 bg = BaseGeometry()
 
-bg.integer_validator("my_int", 12)  # OK
-bg.integer_validator("width", 89)   # OK
+# Valide des valeurs correctes
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
 
+# Teste des erreurs TypeError
 try:
     bg.integer_validator("name", "John")
 except Exception as e:
     print(f"[{e.__class__.__name__}] {e}")
 
+# Teste des erreurs ValueError
 try:
     bg.integer_validator("age", 0)
 except Exception as e:
