@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module qui lit un fichier texte UTF-8 et l'affiche sur la sortie standard."""
+"""Module qui lit un fichier texte UTF-8 et l'affiche sur la sortie
+standard.
+"""
+
 
 def read_file(filename=""):
     """Lit un fichier texte UTF-8 et affiche son contenu sur stdout."""
