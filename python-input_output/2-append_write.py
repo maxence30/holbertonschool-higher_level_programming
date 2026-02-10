@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module qui ajoute une chaîne de caractères à la fin d'un fichier texte UTF-8.
+"""Module qui ajoute une chaîne de caractères à la fin d'un fichier
+texte UTF-8.
 """
 
 
