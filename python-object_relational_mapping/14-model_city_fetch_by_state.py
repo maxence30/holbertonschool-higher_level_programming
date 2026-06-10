@@ -27,3 +27,4 @@ if __name__ == "__main__":
             city.id,
             city.name
         ))
+        
