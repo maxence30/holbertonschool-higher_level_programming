@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Delete states containing a"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,11 +17,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State)\
-                    .filter(State.name.like('%a%'))\
-                    .all()
-
-    for state in states:
+    for state in session.query(State).filter(State.name.like("%a%")).all():
         session.delete(state)
 
     session.commit()
+    

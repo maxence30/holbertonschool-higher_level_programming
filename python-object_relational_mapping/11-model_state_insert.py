@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Insert new State"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,9 +17,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="Louisiana")
-
-    session.add(new_state)
+    new = State(name="Louisiana")
+    session.add(new)
     session.commit()
 
-    print(new_state.id)
+    print(new.id)
+    

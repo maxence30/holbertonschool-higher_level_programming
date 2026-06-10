@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Lists cities by state"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -16,14 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(City, State)\
-                     .join(State, City.state_id == State.id)\
-                     .order_by(City.id)\
-                     .all()
+    results = session.query(State, City).join(City).order_by(City.id).all()
 
-    for city, state in results:
-        print("{}: ({}) {}".format(
-            state.name,
-            city.id,
-            city.name
-        ))
+    for state, city in results:
+        print(f"{state.name}: ({city.id}) {city.name}")
+        

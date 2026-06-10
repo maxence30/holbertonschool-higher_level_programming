@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Lists all State objects"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,7 +17,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
-
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    for state in session.query(State).order_by(State.id).all():
+        print(f"{state.id}: {state.name}")
+        

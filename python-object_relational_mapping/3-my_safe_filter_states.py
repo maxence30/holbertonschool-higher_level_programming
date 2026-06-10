@@ -1,16 +1,11 @@
 #!/usr/bin/python3
+"""Safe filter states"""
+
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3]
-    )
-
+    db = MySQLdb.connect("localhost", 3306, sys.argv[1], sys.argv[2], sys.argv[3])
     cur = db.cursor()
 
     cur.execute(
@@ -23,3 +18,4 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
+    

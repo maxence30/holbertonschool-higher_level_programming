@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Prints first State"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -18,6 +20,6 @@ if __name__ == "__main__":
     state = session.query(State).order_by(State.id).first()
 
     if state:
-        print("{}: {}".format(state.id, state.name))
+        print(f"{state.id}: {state.name}")
     else:
         print("Nothing")
